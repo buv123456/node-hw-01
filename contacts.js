@@ -43,7 +43,7 @@ async function addContact(name, email, phone) {
   contacts.push(newContact);
 
   await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 4));
-  return newContact;
+  return JSON.stringify(newContact);
   // Повертає об'єкт доданого контакту.
 }
 
